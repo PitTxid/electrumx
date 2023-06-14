@@ -968,21 +968,22 @@ class Sumcoin(Coin):
     NAME = "Sumcoin"
     SHORTNAME = "SUM"
     NET = "mainnet"
-    XPUB_VERBYTES = bytes.fromhex("0488b41c")
-    XPRV_VERBYTES = bytes.fromhex("0488abe6")
-    P2PKH_VERBYTE = bytes.fromhex("3f")
-    P2SH_VERBYTES = (bytes.fromhex("c8"), bytes.fromhex("05"))
-    WIF_BYTE = bytes.fromhex("bf")
-    GENESIS_HASH = ('37d4696c5072cd012f3b7c651e5ce56a'
-                    '1383577e4edacc2d289ec9b25eebfd5e')
-    DESERIALIZER = lib_tx.DeserializerSegWit
-    TX_COUNT = 976394
-    TX_COUNT_HEIGHT = 659520
+    P2PKH_VERBYTE = bytes.fromhex("63")
+    P2SH_VERBYTES = (bytes.fromhex("125"),)
+    WIF_BYTE = bytes.fromhex("187")
+    GENESIS_HASH = ('000000f40beaad5804ce621cca107c37'
+                    'dccd119e887625fe79fe0f4e161f6219')
+    DESERIALIZER = lib_tx.DeserializerPeercoin
+    TX_COUNT = 44147
+    TX_COUNT_HEIGHT = 24120
     TX_PER_BLOCK = 2
-    REORG_LIMIT = 800
-    RPC_PORT = 3332
+    RPC_PORT = 9902
+    REORG_LIMIT = 5000
+    ESTIMATE_FEE = 0.01
     PEER_DEFAULT_PORTS = {'t': '53332', 's': '53333'}
-    PEERS = []
+    PEERS = [ ]
+
+    VALUE_PER_COIN = 1000000
 
 
 class Litecoin(Coin):

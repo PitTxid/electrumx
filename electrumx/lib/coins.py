@@ -968,9 +968,9 @@ class Sumcoin(Coin):
     NAME = "Sumcoin"
     SHORTNAME = "SUM"
     NET = "mainnet"
-    P2PKH_VERBYTE = bytes.fromhex("63")
-    P2SH_VERBYTES = (bytes.fromhex("125"),)
-    WIF_BYTE = bytes.fromhex("187")
+    P2PKH_VERBYTE = bytes.fromhex("3f")
+    P2SH_VERBYTES = (bytes.fromhex("7d"),)
+    WIF_BYTE = bytes.fromhex("bb")
     GENESIS_HASH = ('000000f40beaad5804ce621cca107c37'
                     'dccd119e887625fe79fe0f4e161f6219')
     DESERIALIZER = lib_tx.DeserializerPeercoin
